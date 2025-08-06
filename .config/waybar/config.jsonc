@@ -1,0 +1,134 @@
+{
+  "position": "top",
+  "spacing": 0,
+  "modules-left": [
+    "custom/launcher",
+    "cpu",
+    "temperature",
+    "memory",
+    "hyprland/window"
+  ],
+  "modules-center": [
+    "hyprland/workspaces"
+  ],
+  "modules-right": [
+    "tray",
+    "pulseaudio",
+    "clock",
+    "custom/power",
+    "custom/notification"
+  ],
+  "custom/launcher": {
+    "format": "󰣇 Start",
+    "on-click": "rofi -show drun",
+    "tooltip": false
+  },
+  "hyprland/window": {
+    "format": "{}",
+    "max-length": 46,
+    "expand": true,
+    "rewrite": {
+      "^$": "💤",
+      "^(.*)Zen Browser$": "🌀 Zen Browser",
+      "^(.*)(?: — | - )Zen Browser$": "🌀 Zen Browser - $1",
+      "^(.*)Tor Browser$": "🧅 Tor Browser",
+	  "^(.*)(?: — | - )Tor Browser$": "🧅 Tor Browser - $1",
+      "^(.*)Pluma$": " Pluma Editor",
+      "^(.*) - Pluma$": " Pluma Editor - $1"
+    }
+  },
+  "hyprland/workspaces": {
+    "persistent-workspaces": {
+      "*": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    "format": "{icon}",
+    "tooltip": false,
+    "on-scroll-up": "hyprctl dispatch workspace e+1",
+    "on-scroll-down": "hyprctl dispatch workspace e-1"
+  },
+  "clock": {
+    "locale": "de_DE.UTF-8",
+    "format": "{:L%A, %d.%m.%Y %H:%M}",
+    "on-click": "python ~/.config/waybar/calendar.py",
+    "tooltip": false,
+  },
+  "pulseaudio": {
+    "format": "{icon}  {volume}%",
+    "format-muted": "",
+    "format-icons": {
+      "default": [
+        " ",
+        " ",
+        " "
+      ]
+    },
+    "on-click": "pavucontrol",
+    "align": 0.5
+  },
+  "custom/power": {
+    "format": "",
+    "on-click": "wlogout",
+    "interval": "once",
+    "tooltip": false
+  },
+  "custom/notification": {
+    "tooltip-format": "Left: Notifications\nRight: Do not disturb",
+    "format": "{icon}",
+    "format-icons": {
+      "notification": "<span rise='8pt'><span foreground='red'><sup></sup></span></span>",
+      "none": "",
+      "dnd-notification": "<span rise='8pt'><span foreground='red'><sup></sup></span></span>",
+      "dnd-none": "",
+      "inhibited-notification": "<span rise='8pt'><span foreground='red'><sup></sup></span></span>",
+      "inhibited-none": "",
+      "dnd-inhibited-notification": "<span rise='8pt'><span foreground='red'><sup></sup></span></span>",
+      "dnd-inhibited-none": ""
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true
+  },
+  "tray": {
+    "icon-size": 24,
+    "spacing": 10
+  },
+  "cpu": {
+        "interval": 5,
+        "format": "  {usage}%", // Icon: microchip
+        "states": {
+          "warning": 70,
+          "critical": 90
+        }
+    },
+    "memory": {
+        "interval": 5,
+        "format": "  {}%", // Icon: memory
+        "states": {
+            "warning": 70,
+            "critical": 90
+        }
+    },
+    "temperature": {
+      "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+      "critical-threshold": 80,
+      "interval": 5,
+      "format": "{icon}  {temperatureC}°C",
+      "format-icons": [
+          "", // Icon: temperature-empty
+          "", // Icon: temperature-quarter
+          "", // Icon: temperature-half
+          "", // Icon: temperature-three-quarters
+          ""  // Icon: temperature-full
+      ],
+      "tooltip": true
+    }
+}

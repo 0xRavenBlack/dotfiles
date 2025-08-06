@@ -1,0 +1,6 @@
+theme = Dracula
+font-family = Hack Nerd Font Mono Regular
+font-size = 13
+background-opacity = 0.8
+#title = "Ghostty"
+shell-integration = fish

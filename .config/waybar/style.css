@@ -1,0 +1,150 @@
+* {
+    font-family: "NotoSans Nerd Font";
+    font-size: 18px;
+    min-height: 0;
+    font-weight: 500;
+    border: none;
+    box-shadow: none;
+}
+
+#custom-launcher {
+    background-color: #282a36;
+    border-radius: 16px 0px 0px 16px;
+    color: #8be9fd;
+    margin-left: 6px;
+    padding-right: 24px;
+    padding-left: 12px;
+}
+#custom-launcher:hover {
+    background-color: #2A474D;
+    color: #8be9fd;
+}
+
+
+window#waybar {
+    background: transparent;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+#window {
+    margin: 0px;
+	color: #f1fa8c;
+    background-color: #282a36;
+    border-radius: 0px 16px 16px 0px;
+    padding-right: 24px;
+}
+
+
+#workspaces {
+    background-color: #282a36;
+    border-radius: 16px;
+}
+
+#workspaces button {
+    border-radius: 32px;
+}
+
+#workspaces button.active {
+    background-color: #514169;
+    color: #bd93f9;
+}
+
+#workspaces button.urgent {
+    background-color: #B33B3B;
+    color: #ff5555;
+}
+
+
+#cpu {
+    background-color: #282a36;
+    color: #ff79c6;
+    padding: 0px 6px 0px 6px;
+}
+
+#temperature {
+    background-color: #282a36;
+    color: #ff79c6;
+    padding: 0px 6px 0px 6px;
+}
+
+#memory {
+    background-color: #282a36;
+    color: #ff79c6;
+    padding: 0px 24px 0px 6px;
+}
+
+
+#tray {
+    background-color: #282a36;
+    border-radius: 16px 0px 0px 16px;
+    padding: 0px 12px 0px 12px;
+}
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: @red;
+    border-radius: 8px;
+}
+
+
+#pulseaudio {
+    background-color: #282a36;
+    color: #8be9fd;
+    padding: 0px 12px 0px 12px;
+}
+
+#pulseaudio:hover {
+    background-color: #2A474D;
+}
+
+
+#clock {
+    background-color: #282a36;
+    color: #ffb86c;
+    padding: 0px 12px 0px 12px;
+}
+
+#clock:hover {
+    background-color: #785937;
+}
+
+
+#custom-power {
+    background: #282a36;
+    color:  #ff5555;
+    padding: 0px 12px 0px 12px;
+}
+#custom-power:hover {
+    background-color: #822C2C;
+}
+
+
+#custom-notification {
+    background-color: #282a36;
+    border-radius: 0px 16px 16px 0px;
+    color: #50fa7b;
+    margin-right: 6px;
+    padding: 0px 12px 0px 12px;
+}
+
+#custom-notification:hover {
+    background-color: #2C8542;
+}
+
+
+tooltip {
+    background: transparent;
+}
+
+tooltip label {
+    font-size: 18px;
+    padding: 6px;
+    background-color: #282a36;
+    color: @text;
+    border-radius: 16px;
+}
+
