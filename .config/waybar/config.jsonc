@@ -9,7 +9,7 @@
     "hyprland/window"
   ],
   "modules-center": [
-    "hyprland/workspaces"
+    "ext/workspaces"
   ],
   "modules-right": [
     "tray",
@@ -37,20 +37,19 @@
       "^(.*) - Pluma$": " Pluma Editor - $1"
     }
   },
-  "hyprland/workspaces": {
-    "persistent-workspaces": {
-      "*": [
-        1,
-        2,
-        3,
-        4,
-        5
-      ]
-    },
+  "ext/workspaces": {
+    "on-scroll-up": "hyprctl dispatch 'hl.dsp.focus({workspace=\"e+1\"})' ",
+    "on-scroll-down": "hyprctl dispatch 'hl.dsp.focus({workspace=\"e-1\"})' ",
     "format": "{icon}",
-    "tooltip": false,
-    "on-scroll-up": "hyprctl dispatch workspace e+1",
-    "on-scroll-down": "hyprctl dispatch workspace e-1"
+    "format-icons": {
+        "1": "1",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5"
+        },
+    "on-click": "activate",
+    "sort-by-id": true
   },
   "clock": {
     "locale": "de_DE.UTF-8",
