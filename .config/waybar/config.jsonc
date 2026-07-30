@@ -32,7 +32,7 @@
       "^(.*)Zen Browser$": "🌀 Zen Browser",
       "^(.*)(?: — | - )Zen Browser$": "🌀 Zen Browser - $1",
       "^(.*)Tor Browser$": "🧅 Tor Browser",
-	  "^(.*)(?: — | - )Tor Browser$": "🧅 Tor Browser - $1",
+      "^(.*)(?: — | - )Tor Browser$": "🧅 Tor Browser - $1",
       "^(.*)Pluma$": " Pluma Editor",
       "^(.*) - Pluma$": " Pluma Editor - $1"
     }
@@ -55,7 +55,7 @@
     "locale": "de_DE.UTF-8",
     "format": "{:L%A, %d.%m.%Y %H:%M}",
     "on-click": "shadowdate",
-    "tooltip": false,
+    "tooltip": false
   },
   "pulseaudio": {
     "format": "{icon}  {volume}%",

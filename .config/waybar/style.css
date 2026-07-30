@@ -33,6 +33,7 @@ window#waybar {
     background-color: #282a36;
     border-radius: 0px 16px 16px 0px;
     padding-right: 24px;
+    margin-right: 6px;
 }
 
 
@@ -71,7 +72,7 @@ window#waybar {
 #memory {
     background-color: #282a36;
     color: #ff79c6;
-    padding: 0px 24px 0px 6px;
+    padding: 0px 6px 0px 6px;
 }
 
 
@@ -86,7 +87,7 @@ window#waybar {
 
 #tray > .needs-attention {
     -gtk-icon-effect: highlight;
-    background-color: @red;
+    background-color: #ff5555;
     border-radius: 8px;
 }
 
@@ -135,6 +136,11 @@ window#waybar {
     background-color: #2C8542;
 }
 
+#custom-notification.urgent {
+    background-color: #822C2C;
+    color: #ff5555;
+}
+
 
 tooltip {
     background: transparent;
@@ -144,7 +150,7 @@ tooltip label {
     font-size: 18px;
     padding: 6px;
     background-color: #282a36;
-    color: @text;
+    color: #f8f8f2;
     border-radius: 16px;
 }
 
