@@ -153,7 +153,6 @@ kb("ALT + C", exec(matrixclient))
 kb("ALT + K", exec(passwordmanager))
 kb("ALT + S", exec("steam"))
 kb("ALT + H", exec("heroic"))
-hl.bind("WIN + F1", exec("~/.config/hypr/gamemode.sh"))
 
 -- Lock screen
 kb("L", exec("hyprlock"))
