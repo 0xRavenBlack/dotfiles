@@ -14,6 +14,7 @@
   "modules-right": [
     "tray",
     "pulseaudio",
+    "custom/weather",
     "clock",
     "custom/power",
     "custom/notification"
@@ -69,6 +70,13 @@
     },
     "on-click": "pavucontrol",
     "align": 0.5
+  },
+  "custom/weather": {
+    "exec": "~/.config/waybar-weather/waybar-weather",
+    "restart-interval": 60,
+    "return-type": "json",
+    "hide-empty-text": true,
+    "on-click": "pkill -USR1 waybar-weather"
   },
   "custom/power": {
     "format": "",

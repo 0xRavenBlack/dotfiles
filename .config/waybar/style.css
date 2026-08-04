@@ -109,6 +109,12 @@ window#waybar {
     padding: 0px 12px 0px 12px;
 }
 
+.waybar-weather {
+    background-color: #282a36;
+    color: #baef10;
+    padding: 0px 2px 0px 2px;
+}
+
 #clock:hover {
     background-color: #785937;
 }
